@@ -1,5 +1,4 @@
     <!--Style one-->
-    <style>
         /* CSS to ensure images are the same size and centered */
         body {
             display: flex;
@@ -66,5 +65,51 @@
           display: block;
           padding: 8px;
         }
-        </style>
- 
+
+
+    /* Existing styles... */
+
+    /* Keyframe Animations */
+
+    /* Zoom animation */
+    @keyframes zoom {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    /* Fade animation */
+    @keyframes fade {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* Fly-in animation */
+    @keyframes flyIn {
+        0% { transform: translateY(50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Apply animations to images */
+    #image1 img {
+        animation: zoom 5s ease-in-out infinite;
+    }
+
+    #image2 img {
+        animation: fade 2s ease-in-out;
+    }
+
+    #image3 img {
+        animation: flyIn 1s ease-out;
+    }
+
+    /* Smooth transition for all images */
+    .image {
+        transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
