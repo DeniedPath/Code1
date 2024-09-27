@@ -1,115 +1,168 @@
-    <!--Style one-->
-        /* CSS to ensure images are the same size and centered */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-    
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-    
-        figure {
-            margin: 0;
-            text-align: center;
-        }
-    
-        img {
-            width: 300px;
-            /* Set a fixed width */
-            height: 200px;
-            /* Set a fixed height */
-            object-fit: cover;
-            /* Ensure the image fits within the given dimensions */
-            border: 2px solid #ccc;
-            border-radius: 8px;
-        }
-    
-        footer {
-            margin-top: 20px;
-        }
-    
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-    
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <!--Style two-->
-    <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #dddddd;
-        }
-        
-        li {
-          float: left;
-        }
-        
-        li a {
-          display: block;
-          padding: 8px;
-        }
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
 
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    /* Existing styles... */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
 
-    /* Keyframe Animations */
+/* Image styles */
+figure {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
 
-    /* Zoom animation */
-    @keyframes zoom {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-    }
+img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
 
-    /* Fade animation */
-    @keyframes fade {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-    /* Fly-in animation */
-    @keyframes flyIn {
-        0% { transform: translateY(50px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-    }
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
 
-    /* Apply animations to images */
-    #image1 img {
-        animation: zoom 5s ease-in-out infinite;
-    }
+a:hover {
+    text-decoration: underline;
+}
 
-    #image2 img {
-        animation: fade 2s ease-in-out;
-    }
+/* Navigation styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+    width: 100%;
+}
 
-    #image3 img {
-        animation: flyIn 1s ease-out;
-    }
+li {
+    float: left;
+}
 
-    /* Smooth transition for all images */
-    .image {
-        transition: all 0.3s ease;
-    }
+li a {
+    display: block;
+    padding: 8px;
+}
 
-    /* Hover effect */
-    .image:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+/* Animation styles */
+@keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes flyIn {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+#image1 img {
+    animation: zoom 5s ease-in-out infinite;
+}
+
+#image2 img {
+    animation: zoom 2s ease-in-out infinite;
+}
+
+#image3 img {
+    animation: zoom 1s ease-in-out infinite;
+}
+
+.image {
+    transition: all 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* New styles for image actions */
+.image-actions {
+    margin-top: 10px;
+}
+
+.image-actions button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.image-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Feedback form styles */
+#feedback-form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+#feedback-type, #feedback-text {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#feedback-text {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedback-form button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#feedback-form button:hover {
+    background-color: #218838;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
