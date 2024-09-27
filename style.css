@@ -90,6 +90,7 @@ li a {
     100% { transform: translateY(0); opacity: 1; }
 }
 
+/* Apply animations to specific images */
 #image1 img {
     animation: zoom 5s ease-in-out infinite;
 }
@@ -102,16 +103,18 @@ li a {
     animation: zoom 1s ease-in-out infinite;
 }
 
+/* Smooth transition for all images */
 .image {
     transition: all 0.3s ease;
 }
 
+/* Hover effect for images */
 .image:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* New styles for image actions */
+/* Styles for image action buttons */
 .image-actions {
     margin-top: 10px;
 }
