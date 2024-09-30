@@ -53,6 +53,28 @@
         <button type="submit">Submit Feedback</button>
     </form>
 
+    <!-- Feature Request Form -->
+    <div class="container">
+        <h2>Feature Request Form</h2>
+        <form id="featureRequestForm">
+            <label for="featureName">Feature Name:</label>
+            <input type="text" id="featureName" name="featureName" required>
+
+            <label for="featureDescription">Feature Description:</label>
+            <textarea id="featureDescription" name="featureDescription" required></textarea>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="submit">Submit Request</button>
+        </form>
+        <div id="confirmationMessage"></div>
+    </div>
+
     <footer>
         <!--TODO: add social media links-->
     </footer>

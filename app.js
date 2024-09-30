@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageContainer = document.querySelector('main');
     const feedbackForm = document.getElementById('feedback-form');
     const feedbackType = document.getElementById('feedback-type');
+    const featureRequestForm = document.getElementById('featureRequestForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
 
     // Populate feedback dropdown with options
     const feedbackOptions = ['General Feedback', 'App Enhancement', 'General Comment'];
@@ -80,6 +82,57 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Feedback submitted: ${feedbackType.value} - ${feedbackText}`);
         feedbackForm.reset();
     });
+
+    // Handle feature request form submission
+    featureRequestForm.addEventListener('submit', handleFeatureRequest);
+
+    /**
+     * Handles the feature request form submission
+     * @param {Event} event - The submit event
+     */
+    function handleFeatureRequest(event) {
+        event.preventDefault();
+        
+        // Get form values
+        const featureName = document.getElementById('featureName').value;
+        const featureDescription = document.getElementById('featureDescription').value;
+        const priority = document.getElementById('priority').value;
+
+        // Process the form data
+        processFeatureRequest(featureName, featureDescription, priority);
+
+        // Reset the form
+        featureRequestForm.reset();
+
+        // Show confirmation message
+        showConfirmation('Feature request submitted successfully!');
+    }
+
+    /**
+     * Processes the feature request (placeholder for actual processing logic)
+     * @param {string} name - The name of the feature
+     * @param {string} description - The description of the feature
+     * @param {string} priority - The priority of the feature
+     */
+    function processFeatureRequest(name, description, priority) {
+        // Placeholder for processing logic
+        console.log('Processing feature request:', { name, description, priority });
+        // Here you would typically send this data to a server
+    }
+
+    /**
+     * Displays a confirmation message
+     * @param {string} message - The message to display
+     */
+    function showConfirmation(message) {
+        confirmationMessage.textContent = message;
+        confirmationMessage.style.display = 'block';
+
+        // Hide the message after 3 seconds
+        setTimeout(() => {
+            confirmationMessage.style.display = 'none';
+        }, 3000);
+    }
 
     // Initial update of images when the page loads
     updateImages();
