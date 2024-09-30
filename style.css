@@ -169,67 +169,92 @@ footer {
     text-align: center;
     width: 100%;
 }
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
+/* Feature Request Form styles */
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: #333;
+.container h2 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
+#featureRequestForm {
+    display: flex;
+    flex-direction: column;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+#featureRequestForm label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
 }
 
-input[type="text"],
-textarea,
-select {
+#featureRequestForm input[type="text"],
+#featureRequestForm textarea,
+#featureRequestForm select {
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
 }
 
-button {
-    display: block;
-    width: 100%;
+#featureRequestForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#featureRequestForm button {
+    margin-top: 20px;
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background-color: #007BFF;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: #555;
+#featureRequestForm button:hover {
+    background-color: #0056b3;
 }
 
 #confirmationMessage {
     margin-top: 20px;
     padding: 10px;
-    background: #4CAF50;
+    background-color: #28a745;
     color: white;
     border-radius: 4px;
+    text-align: center;
     display: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #featureRequestForm input[type="text"],
+    #featureRequestForm textarea,
+    #featureRequestForm select {
+        font-size: 16px; /* Larger font size for mobile devices */
+    }
+
+    #featureRequestForm button {
+        padding: 12px;
+        font-size: 18px;
+    }
 }
